@@ -1,0 +1,46 @@
+{
+  "name": "apibuilder api",
+  "description": "Host API documentation for applications providing REST APIs, facilitating the design of good resource first APIs.",
+  "base_url": "https://api.apibuilder.io",
+  "info": {
+    "contact": {
+      "name": "Nahstech",
+      "email": "johndoe@nashtechglobal.com"
+    }
+  },
+ 
+  "imports": [
+    {
+      "uri": "https://app.apibuilder.io/apicollective/apibuilder-spec/latest/service.json"
+    },
+    {
+      "uri": "https://app.apibuilder.io/apicollective/apibuilder-common/latest/service.json"
+    },
+    {
+      "uri": "https://app.apibuilder.io/apicollective/apibuilder-generator/latest/service.json"
+    }
+  ],
+  
+  "models": {
+  
+    "user": {
+      "description": "A user is a top level person interacting with the api doc server.",
+      "fields": [
+        {
+          "name": "email",
+          "type": "string"
+        },
+        {
+          "name": "nickname",
+          "type": "string",
+          "description": "Public unique identifier for this user."
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "required": false
+        }
+      ]
+    }
+  }
+}
