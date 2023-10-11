@@ -93,7 +93,34 @@
             "404": { "type": "unit" },
             "422":{ "type": "[error]" }
           }
+        },
+        
+        {
+          "method": "PUT",
+          "body": {
+	    "type": "delivery_form"
+	  },
+          "responses": {
+            "200": { "type": "delivery" },
+            "401": { "type": "unit" },
+            "404": { "type": "unit" },
+            "422":{ "type": "[error]" }
+          }
+        },
+        
+        {
+          "method": "DELETE",
+          "body": {
+	    "type": "unit"
+	  },
+          "responses": {
+            "200": { "type": "unit" },
+            "401": { "type": "unit" },
+            "404": { "type": "unit" },
+            "422":{ "type": "[error]" }
+          }
         }
+        
       ]
     }
   }
