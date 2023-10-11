@@ -22,8 +22,7 @@
         { "name": "number", "type": "string" },
         { "name": "merchant_id", "type": "string" },
         { "name": "submitted_at", "type": "date-time-iso8601" },
-        { "name": "total", "type": "decimal" },
-        { "name": "payment_method", "type": "string" }
+        { "name": "total", "type": "decimal" }
       ]
     }
   },
@@ -39,19 +38,6 @@
             "200": { "type": "order" },
             "401": { "type": "unit" },
             "404": { "type": "unit" }
-          }
-        },
-        {
-          "method": "POST",
-          "path": "/:merchant_id/orders",
-          "body": {
-          	"type": "order"
-          },
-          "responses": {
-            "200": { "type": "order" },
-            "201": { "type": "order" },
-            "404": { "type": "unit" },
-            "422": { "type": "error" }
           }
         }
       ]
