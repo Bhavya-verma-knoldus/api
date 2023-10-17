@@ -62,8 +62,8 @@
     
     "error": {
       "fields": [
-        { "name": "code", "type": "string" },
-        { "name": "message", "type": "string" }
+        { "name": "code", "type": "[string]" },
+        { "name": "message", "type": "[string]" }
       ]
     }
   },
@@ -110,9 +110,6 @@
         
         {
           "method": "DELETE",
-          "body": {
-	    "type": "unit"
-	  },
           "responses": {
             "200": { "type": "unit" },
             "401": { "type": "unit" },
