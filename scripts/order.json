@@ -24,6 +24,19 @@
         { "name": "submitted_at", "type": "date-time-iso8601" },
         { "name": "total", "type": "decimal" }
       ]
+    },
+    "orderform": {
+      "fields": [
+        { "name": "merchant_id", "type": "string" },
+        { "name": "total", "type": "decimal" }
+      ]
+    },
+    "error": {
+      "fields":[
+        { "name": "code", "type": "string" },
+        { "name": "message", "type": "string" },
+        { "name": "details", "type": "string" }
+      ]
     }
   },
 
@@ -42,15 +55,38 @@
         },
         {
         "method": "POST",
-          "path": "/:merchant_id/orders",
           "body": {
           	"type": "order"
+          },
+          "responses": {
+            "200": { "type": "orderform" },
+            "201": { "type": "orderform" },
+            "404": { "type": "unit" },
+            "422": { "type": "[error]" }
+          }
+        },
+        {
+        "method": "DELETE",
+        "body":{
+        	"type": "unit"
+        },
+        "responses":{
+             "200": { "type": "order" },
+             "401": { "type": "unit" },
+             "404": { "type": "unit" },
+             "422": { "type": "[error]" }	        
+        }
+        },
+        {
+        "method": "PUT",
+        "body": {
+          	"type": "orderform"
           },
           "responses": {
             "200": { "type": "order" },
             "201": { "type": "order" },
             "404": { "type": "unit" },
-            "422": { "type": "error" }
+            "422": { "type": "[error]" }
           }
         }
       ]
