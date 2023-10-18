@@ -33,7 +33,7 @@
     },
     "error": {
       "fields":[
-        { "name": "code", "type": "string" },
+        { "name": "code", "type": "[string]" },
         { "name": "message", "type": "[string]" }
       ]
     }
