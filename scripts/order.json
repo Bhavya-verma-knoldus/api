@@ -59,7 +59,7 @@
           },
           "responses": {
             "200": { "type": "order_form" },
-            "201": { "type": "order_form" },
+            "401": { "type": "unit" },
             "404": { "type": "unit" },
             "422": { "type": "error" }
           }
@@ -80,7 +80,7 @@
           },
           "responses": {
             "200": { "type": "order" },
-            "201": { "type": "order" },
+            "401": { "type": "unit" },
             "404": { "type": "unit" },
             "422": { "type": "error" }
           }
