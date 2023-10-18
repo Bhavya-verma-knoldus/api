@@ -33,7 +33,7 @@
     },
     "error": {
       "fields":[
-        { "name": "code", "type": "[string]" },
+        { "name": "code", "type": "string" },
         { "name": "message", "type": "[string]" }
       ]
     }
@@ -67,7 +67,7 @@
         {
         "method": "DELETE",
         "responses":{
-             "200": { "type": "order" },
+             "200": { "type": "unit" },
              "401": { "type": "unit" },
              "404": { "type": "unit" },
              "422": { "type": "error" }	        
