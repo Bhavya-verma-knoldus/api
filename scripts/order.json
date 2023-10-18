@@ -25,7 +25,7 @@
         { "name": "total", "type": "decimal" }
       ]
     },
-    "orderform": {
+    "order_form": {
       "fields": [
         { "name": "merchant_id", "type": "string" },
         { "name": "total", "type": "decimal" }
@@ -34,8 +34,7 @@
     "error": {
       "fields":[
         { "name": "code", "type": "string" },
-        { "name": "message", "type": "string" },
-        { "name": "details", "type": "string" }
+        { "name": "message", "type": "[string]" }
       ]
     }
   },
@@ -56,37 +55,34 @@
         {
         "method": "POST",
           "body": {
-          	"type": "order"
+          	"type": "order_form"
           },
           "responses": {
-            "200": { "type": "orderform" },
-            "201": { "type": "orderform" },
+            "200": { "type": "order_form" },
+            "201": { "type": "order_form" },
             "404": { "type": "unit" },
-            "422": { "type": "[error]" }
+            "422": { "type": "error" }
           }
         },
         {
         "method": "DELETE",
-        "body":{
-        	"type": "unit"
-        },
         "responses":{
              "200": { "type": "order" },
              "401": { "type": "unit" },
              "404": { "type": "unit" },
-             "422": { "type": "[error]" }	        
+             "422": { "type": "error" }	        
         }
         },
         {
         "method": "PUT",
         "body": {
-          	"type": "orderform"
+          	"type": "order_form"
           },
           "responses": {
             "200": { "type": "order" },
             "201": { "type": "order" },
             "404": { "type": "unit" },
-            "422": { "type": "[error]" }
+            "422": { "type": "error" }
           }
         }
       ]
