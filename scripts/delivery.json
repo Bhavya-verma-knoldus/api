@@ -114,7 +114,7 @@
             "200": { "type": "unit" },
             "401": { "type": "unit" },
             "404": { "type": "unit" },
-            "422":{ "type": "error" }
+            "422": { "type": "error" }
           }
         }
         
