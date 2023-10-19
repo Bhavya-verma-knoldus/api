@@ -58,7 +58,7 @@
           	"type": "order_form"
           },
           "responses": {
-            "200": { "type": "order_form" },
+            "200": { "type": "order" },
             "401": { "type": "unit" },
             "404": { "type": "unit" },
             "422": { "type": "error" }
