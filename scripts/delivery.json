@@ -48,9 +48,26 @@
         { "name": "mobile_number", "type": "string", "required": false },
         { "name": "email_id", "type": "string", "required": false }
       ]
+    },
+    
+    "delivery_form" : {
+    	"fields" : [
+        { "name": "order_number", "type": "string" },
+        { "name": "merchant_id", "type": "string" },
+        { "name": "origin", "type": "address" },
+        { "name": "destination", "type": "address" },
+        { "name": "contact_info", "type": "contact" }	
+    	]
+    },
+    
+    "error": {
+      "fields": [
+        { "name": "code", "type": "string" },
+        { "name": "message", "type": "[string]" }
+      ]
     }
   },
-
+	
   "resources": {
     "delivery": {
       "path": "/:merchant_id/delivery",
@@ -63,7 +80,44 @@
             "401": { "type": "unit" },
             "404": { "type": "unit" }
           }
+        },
+        
+        {
+          "method": "POST",
+          "body": {
+	    "type": "delivery_form"
+	  },
+          "responses": {
+            "200": { "type": "delivery" },
+            "401": { "type": "unit" },
+            "404": { "type": "unit" },
+            "422":{ "type": "error" }
+          }
+        },
+        
+        {
+          "method": "PUT",
+          "body": {
+	    "type": "delivery_form"
+	  },
+          "responses": {
+            "200": { "type": "delivery" },
+            "401": { "type": "unit" },
+            "404": { "type": "unit" },
+            "422":{ "type": "error" }
+          }
+        },
+        
+        {
+          "method": "DELETE",
+          "responses": {
+            "200": { "type": "unit" },
+            "401": { "type": "unit" },
+            "404": { "type": "unit" },
+            "422": { "type": "error" }
+          }
         }
+        
       ]
     }
   }
