@@ -65,15 +65,6 @@
           }
         },
         {
-        "method": "DELETE",
-        "responses":{
-             "200": { "type": "unit" },
-             "401": { "type": "unit" },
-             "404": { "type": "unit" },
-             "422": { "type": "error" }	        
-        }
-        },
-        {
         "method": "PUT",
         "body": {
           	"type": "order_form"
@@ -84,6 +75,15 @@
             "404": { "type": "unit" },
             "422": { "type": "error" }
           }
+        },
+        {
+        "method": "DELETE",
+        "responses":{
+             "200": { "type": "unit" },
+             "401": { "type": "unit" },
+             "404": { "type": "unit" },
+             "422": { "type": "error" }	        
+        }
         }
       ]
     }
