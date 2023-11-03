@@ -53,7 +53,6 @@
     "delivery_form" : {
     	"fields" : [
         { "name": "order_number", "type": "string" },
-        { "name": "merchant_id", "type": "string" },
         { "name": "origin", "type": "address" },
         { "name": "destination", "type": "address" },
         { "name": "contact_info", "type": "contact" }	
