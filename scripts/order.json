@@ -28,7 +28,8 @@
     "order_form": {
       "fields": [
         { "name": "merchant_id", "type": "string" },
-        { "name": "total", "type": "decimal" }
+        { "name": "total", "type": "decimal" },
+        { "name": "number", "type": "string"}
       ]
     },
     "error": {
