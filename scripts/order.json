@@ -54,7 +54,6 @@
         },
         {
         "method": "POST",
-	"path": "/:number",
           "body": {
           	"type": "order_form"
           },
