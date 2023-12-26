@@ -52,7 +52,6 @@
     
     "delivery_form" : {
     	"fields" : [
-        { "name": "order_number", "type": "string" },
         { "name": "origin", "type": "address" },
         { "name": "destination", "type": "address" },
         { "name": "contact_info", "type": "contact" }	
@@ -96,6 +95,7 @@
         
         {
           "method": "PUT",
+          "path": "/:order_number",
           "body": {
 	    "type": "delivery_form"
 	  },
@@ -109,6 +109,7 @@
         
         {
           "method": "DELETE",
+          "path": "/:order_number",
           "responses": {
             "200": { "type": "unit" },
             "401": { "type": "unit" },
